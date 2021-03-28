@@ -6,7 +6,7 @@ import (
 
 	"github.com/TarsCloud/TarsGo/tars"
 
-	"github.com/TarsCloud/ResFetcher/fetcher"
+	"github.com/TarsCloud/ResFetcher/fetchertars"
 	"github.com/TarsCloud/ResFetcher/impl"
 )
 
@@ -22,7 +22,7 @@ func main() {
 		os.Exit(-1)
 	}
 	// New servant
-	app := new(fetcher.Fetcher)
+	app := new(fetchertars.Fetcher)
 	// Register Servant
 	app.AddServantWithContext(imp, cfg.App+"."+cfg.Server+".fetcherObj")
 

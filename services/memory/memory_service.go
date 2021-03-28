@@ -1,19 +1,19 @@
 package memory
 
 import (
-	"github.com/TarsCloud/ResFetcher/fetcher"
+	"github.com/TarsCloud/ResFetcher/fetchertars"
 
 	stat "github.com/mackerelio/go-osstat/memory"
 )
 
 // Stat 获取内存统计信息
-func Stat() (*fetcher.MemInfo, error) {
+func Stat() (*fetchertars.MemInfo, error) {
 	s, err := stat.Get()
 	if err != nil {
 		return nil, err
 	}
 
-	ret := &fetcher.MemInfo{
+	ret := &fetchertars.MemInfo{
 		Total:     int64(s.Total),
 		Used:      int64(s.Used),
 		Cached:    int64(s.Cached),

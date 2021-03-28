@@ -3,7 +3,7 @@ package impl
 import (
 	"context"
 
-	"github.com/TarsCloud/ResFetcher/fetcher"
+	"github.com/TarsCloud/ResFetcher/fetchertars"
 	"github.com/TarsCloud/ResFetcher/services/cpu"
 	"github.com/TarsCloud/ResFetcher/services/memory"
 )
@@ -26,7 +26,7 @@ func (imp *FetcherImp) Destroy() {
 }
 
 // FetchResInfo 获取系统资源
-func (imp *FetcherImp) FetchResInfo(tarsCtx context.Context) (ret fetcher.ResResp, err error) {
+func (imp *FetcherImp) FetchResInfo(tarsCtx context.Context) (ret fetchertars.ResResp, err error) {
 	memInfo, err := memory.Stat()
 	if err != nil {
 		return ret, err
