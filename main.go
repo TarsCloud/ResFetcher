@@ -6,7 +6,8 @@ import (
 
 	"github.com/TarsCloud/TarsGo/tars"
 
-	"github.com/TarsCloud/ResFetcher/TarsTestToolKit"
+	"github.com/TarsCloud/ResFetcher/fetcher"
+	"github.com/TarsCloud/ResFetcher/impl"
 )
 
 func main() {
@@ -14,14 +15,14 @@ func main() {
 	cfg := tars.GetServerConfig()
 
 	// New servant imp
-	imp := new(fetcherImp)
+	imp := new(impl.FetcherImp)
 	err := imp.Init()
 	if err != nil {
 		fmt.Printf("fetcherImp init fail, err:(%s)\n", err)
 		os.Exit(-1)
 	}
 	// New servant
-	app := new(TarsTestToolKit.Fetcher)
+	app := new(fetcher.Fetcher)
 	// Register Servant
 	app.AddServantWithContext(imp, cfg.App+"."+cfg.Server+".fetcherObj")
 
