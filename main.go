@@ -6,8 +6,8 @@ import (
 
 	"github.com/TarsCloud/TarsGo/tars"
 
-	"github.com/TarsCloud/ResFetcher/fetchertars"
-	"github.com/TarsCloud/ResFetcher/impl"
+	"github.com/franklee0817/ResFetcher/fetchertars"
+	"github.com/franklee0817/ResFetcher/impl"
 )
 
 func main() {

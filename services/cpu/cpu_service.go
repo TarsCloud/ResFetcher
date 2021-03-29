@@ -1,7 +1,7 @@
 package cpu
 
 import (
-	"github.com/TarsCloud/ResFetcher/fetchertars"
+	"github.com/franklee0817/ResFetcher/fetchertars"
 
 	linuxproc "github.com/c9s/goprocinfo/linux"
 )

@@ -1,7 +1,7 @@
 package memory
 
 import (
-	"github.com/TarsCloud/ResFetcher/fetchertars"
+	"github.com/franklee0817/ResFetcher/fetchertars"
 
 	stat "github.com/mackerelio/go-osstat/memory"
 )

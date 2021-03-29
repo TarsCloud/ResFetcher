@@ -1,4 +1,4 @@
-module github.com/TarsCloud/ResFetcher
+module github.com/franklee0817/ResFetcher
 
 go 1.14
 

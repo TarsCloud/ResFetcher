@@ -3,9 +3,9 @@ package impl
 import (
 	"context"
 
-	"github.com/TarsCloud/ResFetcher/fetchertars"
-	"github.com/TarsCloud/ResFetcher/services/cpu"
-	"github.com/TarsCloud/ResFetcher/services/memory"
+	"github.com/franklee0817/ResFetcher/fetchertars"
+	"github.com/franklee0817/ResFetcher/services/cpu"
+	"github.com/franklee0817/ResFetcher/services/memory"
 )
 
 // FetcherImp servant implementation
