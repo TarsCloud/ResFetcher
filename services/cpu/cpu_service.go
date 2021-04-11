@@ -15,10 +15,12 @@ func Stat() ([]fetchertars.CoreInfo, error) {
 
 	cpus := make([]fetchertars.CoreInfo, 0)
 	for _, s := range stat.CPUStats {
-		cpus = append(cpus, fetchertars.CoreInfo{
+		c := fetchertars.CoreInfo{
 			Total: int64(s.User + s.Nice + s.System + s.Idle + s.IOWait + s.IRQ + s.SoftIRQ + s.Steal + s.Guest + s.GuestNice),
 			Idle:  int64(s.Idle),
-		})
+		}
+		c.Used = c.Total - c.Idle
+		cpus = append(cpus, c)
 	}
 
 	return cpus, nil
